@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>ADD</title>
+    <link href="./stylesheet.css" rel="stylesheet">
+    <link href="./mystyle.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<main role="main" class="container2">
+    <form name="person" class = "my-3 p-3 bg-white rounded box-shadow" action="form_ok.jsp" onsubmit ="return validateForm()" method="post">
+        <div class="my-3 p-3 bg-white rounded box-shadow">
+            <legend class="border-bottom border-gray pb-2 mb-0">Information Form</legend><br>
+            <label for="name"><span>*</span>이름:</label><br>
+            <input type="text" id="name" name="name" placeholder='이름을 입력'><br><br>
+            <label for="name">별명:</label><br>
+            <input type="text" id="id" name="id"><br><br>
+            <label for="age">나이:</label><br>
+            <input type="number" id="age" name="age"><br><br>
+            <label for="phone">전화번호:</label><br>
+            <input type="text" id="phone" name="phone"><br><br>
+            <label for="email">이메일:</label><br>
+            <input type="text" id="email" name="email"><br><br>
+            <label for="gender1"><span>*</span>성별:</label>
+            <input type="radio" id="gender1" name="gender" value="남성" checked required>남 <input type="radio" id="radio" name="gender" value="여성">여<br><br>
+            생일: <input type="date" min="1980-01-01" max="2015-01-01" name="fromdate"><br><br>
+            지역선택:
+            <select name="city">
+                <optgroup label="서울">
+                    <option value="1">강남구</option>
+                    <option value="2">서초구</option>
+                    <option value="3">송파구</option>
+                </optgroup>
+                <optgroup label="경기도">
+                    <option value="11">성남시</option>
+                    <option value="12">수원시</option>
+                    <option value="13">용인시</option>
+                </optgroup>
+            </select><br><br>
+            <label for="hobby1">취미:    </label>
+            <input type="checkbox" id="hobby1" name="hobby1" value="1">  영화감상
+            <input type="checkbox" id="hobby2" name="hobby2" value="2">  독서
+            <input type="checkbox" id="hobby3" name="hobby3" value="3">  운동  <br><br>
+            선호 색상: <input type="color" name="color" value="#ff0000"><br><br>
+            기타: <br><textarea name="content" cols="30" rows="5" placeholder='내용'></textarea><br><br>
+            <input styel type="submit" value="저장"><input type="reset" value="취소">
+        </div>
+    </form>
+</main>
+
+<script> // Validation Check : 이름을 입력했는지, 또 이름이 두 글자 이상 입력되었는지 확인한다.
+function validateForm(){
+    var name = document.person.name.value;
+    if (name == ""){
+        alert("이름을 입력하세요");
+        name.focus();
+        return false;
+    }
+    if (name.length < 2){
+        alert("이름은 2글자 이상 입력하세요");
+        name.focus();
+        return false;
+    }
+}
+
+</script>
+
+</body>
+</html>

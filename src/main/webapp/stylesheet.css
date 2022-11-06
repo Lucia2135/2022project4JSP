@@ -1,0 +1,28 @@
+html,
+body {
+    font-family : Arial;
+    font-size: 1.0em;
+    height: 800px;
+    text-align: left;
+}
+
+body{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 100px;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.container2{
+    width: 350px;
+}
+
+.p{
+    text-align: right;
+    color : black;
+}
+
+.add-button{
+    margin-left: -50px;
+}
+
